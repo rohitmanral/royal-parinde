@@ -14,7 +14,7 @@ SECRET_KEY = 'lxsejz_kagz&^#dlu_$(iu40##r4l-452ms%r@9ac*kz$6()xb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['royal-parinde.herokuapp.com/', '127.0.0.1']
+ALLOWED_HOSTS = ['royal-parinde.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
