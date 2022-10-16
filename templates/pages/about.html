@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% block title %} | About {% endblock %}
+{% block content %}
+
+{% load static %}
+
+
+<!-- Sub banner start -->
+<div class="sub-banner overview-bgi">
+    <div class="container breadcrumb-area">
+        <div class="breadcrumb-areas">
+            <h1>About Us</h1>
+            <ul class="breadcrumbs">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li class="active">About Us</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Sub Banner end -->
+
+<!-- Service center strat -->
+<div class="about-car content-area-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 col-lg-6">
+                <div class="about-car-photo">
+                    <div id="carDetailsSlider" class="carousel car-details-sliders slide">
+                        <!-- main slider carousel items -->
+                        <div class="carousel-inner">
+                            <div class="active item carousel-item" data-slide-number="0">
+                                <img src="{% static 'img/car/car-1.jpg' %}" class="img-fluid" alt="slider-car">
+                            </div>
+                            <div class="item carousel-item" data-slide-number="1">
+                                <img src="{% static 'img/car/car-2.jpg' %}" class="img-fluid" alt="slider-car">
+                            </div>
+                            <div class="item carousel-item" data-slide-number="2">
+                                <img src="{% static 'img/car/car-3.jpg' %}" class="img-fluid" alt="slider-car">
+                            </div>
+                        </div>
+                        <!-- main slider carousel nav controls -->
+                        <ul class="carousel-indicators car-properties list-inline nav nav-justified">
+                            <li class="list-inline-item active">
+                                <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#carDetailsSlider">
+                                    <img src="{% static 'img/car/car-1.jpg' %}" class="img-fluid" alt="small-car">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a id="carousel-selector-1" data-slide-to="1" data-target="#carDetailsSlider">
+                                    <img src="{% static 'img/car/car-2.jpg' %}" class="img-fluid" alt="small-car">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a id="carousel-selector-2" data-slide-to="2" data-target="#carDetailsSlider">
+                                    <img src="{% static 'img/car/car-3.jpg' %}" class="img-fluid" alt="small-car">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-7 col-lg-6 align-self-center">
+                <div class="best-used-car">
+                    <h3>Welcome to <span>ROYAL PARINDE</span></h3>
+                    <p><b>ROYAL PARINDE TOUR AND TRAVEL</b> vast array of holiday services is taking holidaying to an entirely new level. We are opening the gateways of the travel industry to travellers of the world to win their smile and heart. We design the holiday packages with keeping in mind the travellers budget without compromising on the basic needs of a vacation. <b>ROYAL PARINDE TOUR AND TRAVEL</b> offers the passengers with exciting destinations itineraries at the price one could only dream of it. We have fully utilised all the actual market potential, and we are also looking to create a new market potential in the land of Incredible India. We plan standard as well as customised packages by keeping mind of exciting sightseeing, delicious meals, and finest travel facilities with most exceptional hotel accommodation. <b>ROYAL PARINDE TOUR AND TRAVEL</b> offers you exciting opportunity to explore all the wonders of India-be it families, students, youth, honeymooners, groups or individually. We offer a broad range of holiday packages mainly: - Family and group tours, Packages for NRIs and foreigners, Honeymoon packages, Students educational group tours, Ayurveda packages, Ecotourism packages, Pilgrimage packages, Adventure packages, Get-together packages, Season packages, Festival and Art packages. We offer packages that cover every convenience of traveller whether it is an extended vacation with the family or with friends or with a weekend break. <b>ROYAL PARINDE TOUR AND TRAVEL</b> has categorised all holiday packages into standard, deluxe and Luxury class categories. Travel Services <b>ROYAL PARINDE TOUR AND TRAVEL</b> provides quality service to customers in getting connected to any part of the world. We move people to their destination at the industrial best fare. We are today capable of providing best possible food with all scheduled Airlines (full service as well as budget carriers) the world over. We are also equipped to analyse and recommend the most cost-effective and value packed solutions to our customers. We provide service in the areas of international & domestic airline ticketing, local train ticketing, Visa services and documentation, travel insurance, medical insurance for abroad travellers and also providing transportation facilities with premium and flat segment cars and luxury coaches <b>ROYAL PARINDE TOUR AND TRAVEL</b> gives you the best accommodation across India at the best fare whether it is a hotel, resort or home stays. With quality services and timely deliveries, we ensure you that our customer needs are fulfilled at their fingertips. <b>ROYAL PARINDE TOUR AND TRAVEL</b> looks into customer service first with “service is our passion” punch line. Event ManagementApart from travel services, <b>ROYAL PARINDE TOUR AND TRAVEL</b> is diversified into the industry of event management services. We specialise in providing intensive and equally exclusive event management services. We offer customised solutions for corporate for various Corporate Tours, Conferences, Dealer Meets, Roadshows, Launching of Products, Promotional Activities. We provide the highest quality in delivering the services. <b>ROYAL PARINDE TOUR AND TRAVEL</b> also provides the customer with the services for organising Fashion Shows, Birthday Parties, Art and Musical functions, Exhibition Management, Party Organizing, Magic Shows and Inaugural Ceremony. We will assist you at every stage from planning to the result. We provide exceptional reliability, trust and customer satisfaction to make the customer wonderful about being with us. We ensure our clients with best event management services provided by us.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service center end -->
+
+
+
+<!-- Our team start -->
+<div class="our-team content-area bg-grea-3">
+    <div class="container">
+        <!-- Main title -->
+        <div class="main-title">
+            <h1>Executive <span>Team</span></h1>
+            <p>Our team is always upfront to provide the optimal services to our customers.</p>
+        </div>
+        <!-- Slick slider area start -->
+        <div class="slick-slider-area clearfix">
+            <div class="row slick-carousel" data-slick='{"slidesToShow": 4, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+              {% for team in teams %}
+                <div class="slick-slide-item">
+                    <div class="team-1">
+                        <div class="photo">
+                            <a href="#">
+                                <img src="{{team.photo.url}}" alt="team-1" class="img-fluid">
+                            </a>
+                            <div class="social-list clearfix">
+                                <a href="{{team.facebook_link}}" target="_blank" class="facebook-bg"><i class="fa fa-facebook"></i></a>
+                                <a href="{{team.twitter_link}}" target="_blank" class="twitter-bg"><i class="fa fa-twitter"></i></a>
+                                <a href="{{team.google_plus_link}}" class="google-bg"><i class="fa fa-google"></i></a>
+                            </div>
+                        </div>
+                        <div class="details">
+                            <h4><a href="team-detail.html">{{team.first_name}} {{team.last_name}}</a></h4>
+                            <h5>{{team.designation}}</h5>
+                        </div>
+                    </div>
+                </div>
+              {% endfor %}
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Our team end -->
+
+
+{% endblock %}
