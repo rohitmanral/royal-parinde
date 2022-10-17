@@ -155,3 +155,11 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 # Whitenoise settings
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+# Name, Max Width (inclusive)
+DEFAULT_BREAKPOINTS = {
+    'phone': 480,
+    'tablet': 767,
+    'desktop': None,
+}
